@@ -8,6 +8,9 @@ const correctCountElement = document.getElementById("correct-count");
 const incorrectCountElement = document.getElementById("incorrect-count");
 const percentageElement = document.getElementById("percentage");
 
+const correctSound = document.getElementById("correct-sound");
+const incorrectSound = document.getElementById("incorrect-sound");
+
 let currentProblem = {};
 let correctAnswers = 0;
 let incorrectAnswers = 0;
@@ -110,16 +113,18 @@ function checkAnswer(answer) {
         correctAnswers++;
         resultElement.textContent = "¡Correcto! 😊";
         resultElement.className = "correct";
+        correctSound.play(); // Reproduce el sonido correcto
     } else {
         incorrectAnswers++;
         const actualResult =
             currentProblem.correctAnswer === "positive" ? "Positivo" : "Negativo";
         resultElement.textContent = `Incorrecto ❌. El resultado es ${actualResult}.`;
         resultElement.className = "incorrect";
+        incorrectSound.play(); // Reproduce el sonido incorrecto
     }
 
     // Genera automáticamente un nuevo problema después de una breve pausa
     setTimeout(() => {
         generateProblem();
-    }, 1000); // Espera 1 segundo antes de generar el siguiente problema
+    }, 1000);
 }
