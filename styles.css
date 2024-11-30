@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+#problem {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+#numerator,
+#denominator {
+    display: block;
+    font-size: 24px;
+}
+
+#divider {
+    display: block;
+    border-top: 2px solid #333;
+    margin: 5px 0;
+    width: 60px;
+    height: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5ea7bb;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #488e99;
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#back-to-start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5ea7bb;
+    color: white;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+#back-to-start-btn:hover {
+    background-color: #488e99;
+}

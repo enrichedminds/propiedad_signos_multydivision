@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escoge el signo del resultado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-container">
+            <h1>Selecciona el tiempo para practicar</h1>
+            <label for="time-select">¿Cuántos segundos deseas practicar?</label>
+            <input type="number" id="time-select" min="10" max="3600" value="60">
+            <button onclick="startPractice()">Iniciar práctica</button>
+        </div>
+        <div id="practice-container" style="display: none;">
+            <div id="timer">Tiempo restante: <span id="time-remaining">60</span> segundos</div>
+            <div id="problem-container">
+                <p id="problem"></p>
+            </div>
+            <div id="buttons">
+                <button onclick="checkAnswer('positive')">Positivo</button>
+                <button onclick="checkAnswer('negative')">Negativo</button>
+            </div>
+            <button id="back-to-start-btn" onclick="goToStart()">Volver al inicio</button>
+            <p id="result"></p>
+        </div>
+        <div id="summary" style="display: none;">
+            <h2>Resultados de la práctica</h2>
+            <p id="correct-count"></p>
+            <p id="incorrect-count"></p>
+            <p id="percentage"></p>
+            <button onclick="goToStart()">Volver a la página inicial</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
